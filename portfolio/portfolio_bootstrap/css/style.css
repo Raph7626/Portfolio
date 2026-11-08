@@ -1,0 +1,50 @@
+.avatar-container {
+    position: relative;
+    width: 350px; 
+    height: 350px;
+    display: inline-block;
+}
+
+.splash-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); 
+    width: 100%;
+    z-index: 1; 
+}
+
+.person-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 2; /* Nằm trên vết sơn */
+}
+
+.zoom-img {
+    transition: transform 0.3s ease; 
+}
+
+.zoom-img:hover {
+    transform: scale(1.08); 
+}
+
+#galleryTrack {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#galleryTrack::-webkit-scrollbar { display: none; }
+#galleryTrack img {
+  height: 280px;
+  scroll-snap-align: start;
+}
+
+html { scroll-padding-top: 70px; }
+
+:root {
+        --bs-body-font-family: 'Inter', sans-serif;
+    }
